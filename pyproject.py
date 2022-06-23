@@ -12,7 +12,8 @@ mainmenu = ("""
     3.update
     4.delete
     5.save / export
-    6.end program
+    6.help
+    7.end program
     """)
 menu1 = ("""
             1.Create new folder
@@ -46,7 +47,7 @@ print(spaceholder1)
 print("Please choose one of the following options:")
 
 #MAIN MENU
-while (z != 6):
+while (z != 7):
     print(spaceholder1)
     print("MAIN MENU")
     print(spaceholder1)
@@ -64,18 +65,18 @@ while (z != 6):
             a = int(input("Please enter a number between 1 and 4:"))
 #CREATE FOLDER FUNCTION
             if a == 1:
-                foldername = input("Enter new folder name:")
-                folderpath = input("Enter path for new folder:")
-                os.mkdir(folderpath + foldername)
-                print(foldername + " successfully created at " + folderpath)
+                folder = input("Enter new folder name:")
+                path = input("Enter path for new folder:")
+                os.mkdir(path + folder)
+                print(folder + " successfully created at " + path)
 #CREATE FILE FUNCTION
             elif a == 2:
-                filename1 = input("Enter file name:")
-                filetype1 = input("Enter file type:")
-                filepath1 = input("Enter file path:")
-                open(filepath1 + filename1 + filetype1, "x")
-                print(filename1 + " successfully created at " + filepath1)
-#SHOP DIRECTORY TREE
+                file = input("Enter file name:")
+                filetype = input("Enter file type:")
+                path = input("Enter file path:")
+                open(path + file + filetype, "x")
+                print(file + " successfully created at " + path1)
+#SHOW DIRECTORY TREE
             elif a == 3:
                 print("File tree for C:/pyproject/")
                 def tree_printer(root):
@@ -166,6 +167,7 @@ while (z != 6):
                 os.chdir(directorypath)
                 os.rename(file1, file2)
                 print("File " + file1 + " was renamed to " + file2)
+#SHOW FILE TREE
             elif c == 3:
                 print("File tree for C:/pyproject/")
                 def tree_printer(root):
@@ -199,6 +201,29 @@ while (z != 6):
         print("SAVE/EXPORT")
         print(spaceholder1)
     elif z == 6:
+        print(spaceholder1)
+        print("Help")
+        print("Press numbers to navigate through the help menus")
+        print("1: Help Menu (CREATE)")
+        print("2: Help Menu (READ)")
+        print("3: Help Menu (UPDATE)")
+        print("4: Help Menu (DELETE)")
+        print("5: Help")
+        helpinput = input("Please enter a number between 1 and 5:")
+        while(helpinput !=5):
+            if helpinput == 1 :
+                print
+            elif helpinput == 2:
+                print
+            elif helpinput == 3:
+                print
+            elif helpinput == 4:
+                print
+            elif helpinput == 5:
+                print
+        input("Press enter key to continue!")
+        print(spaceholder1)
+    elif z == 7:
         print(spaceholder1)
         print("Good Bye!")
         print("====================== END =======================")
