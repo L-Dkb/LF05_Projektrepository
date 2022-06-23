@@ -36,19 +36,24 @@ menu4 = ("""
             3. delete single column
             4. back
             """)
+spaceholder1 = ("==================================================")
 
 print("Welcome to the Employee Management Program (EMP)")
-print("==================================================")
+print(spaceholder1)
 print("Please choose one of the following options:")
 import os
 while (z != 6):
+    print(spaceholder1)
+    print("MAIN MENU")
+    print(spaceholder1)
     print(mainmenu)
+    print(spaceholder1)
     z = int(input("Please enter a number between 1 and 6:"))
     if z == 1:
         while (a !=4):
-            print("==================================================")
+            print(spaceholder1)
             print("CREATE")
-            print("==================================================")
+            print(spaceholder1)
             print(menu1)
             a = int(input("Please enter a number between 1 and 4:"))
             if a == 1:
@@ -75,15 +80,17 @@ while (z != 6):
             elif a == 4:
                 print("Back to the menu")
     elif z == 2:
-        print("==================================================")
+        print(spaceholder1)
         print("READ")
-        print("==================================================")
+        print(spaceholder1)
         while (b !=5):
             print(menu2)
             b = int(input("Please enter a number between 1 and 5:"))
             if b == 1:
-                print("1. show all datasets")
-                b = int(input("Please enter a number between 1 and 5:"))
+                path = input("Enter file path and name")
+                x = open(path, "r")
+                print("Showing " C:/pyproject/test123.txt " contents...")
+                print(x.read())
             elif b == 2:
                 print("2. show single dataset")
                 b = int(input("Please enter a number between 1 and 5:"))
@@ -96,9 +103,9 @@ while (z != 6):
             elif b == 5:
                 print("Back to the menu")
     elif z == 3:
-        print("==================================================")
+        print(spaceholder1)
         print("UPDATE")
-        print("==================================================")
+        print(spaceholder1)
         while (c !=4):
             print(menu3)
             c = int(input("Please enter a number between 1 and 3:"))
@@ -123,9 +130,9 @@ while (z != 6):
                             print(os.path.join(root, f))
                 tree_printer('C:/pyproject/')
     elif z == 4:
-        print("==================================================")
+        print(spaceholder1)
         print("DELETE")
-        print("==================================================")
+        print(spaceholder1)
         while (d !=4):
             print(menu4)
             d = int(input("Please enter a number between 1 and 4:"))
@@ -141,10 +148,10 @@ while (z != 6):
             elif d == 4:
                 print("Back to the menu")
     elif z == 5:
-        print("==================================================")
+        print(spaceholder1)
         print("SAVE/EXPORT")
-        print("==================================================")
+        print(spaceholder1)
     elif z == 6:
-        print("==================================================")
+        print(spaceholder1)
         print("Good Bye!")
         print("====================== END =======================")
