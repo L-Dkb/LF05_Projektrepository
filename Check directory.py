@@ -1,7 +1,10 @@
 import os
-path = input("Enter file path and name")
-path_check = os.path.exists("path")
-if path_check == "true":
+import os.path
+spaceholder1 = ("==================================================")
+path = input("Enter file path and name:")
+path_check = os.path.exists(path)
+if path_check:
+    print("true")
 else:
     print(spaceholder1)
     print("Requested file does not exist! Check path and try again!")
