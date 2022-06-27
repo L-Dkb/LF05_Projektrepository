@@ -25,7 +25,7 @@ menu2 = ("""
             1. Read file
             2. Read specific line in file
             3. 
-            4. show empty fields
+            4. show empty filds
             5. back
             """)
 menu3 = ("""
@@ -35,7 +35,7 @@ menu3 = ("""
             4. Back
             """)
 menu4 = ("""
-            1. delete all
+            1. Delete File.
             2. delete single row
             3. delete single column
             4. back
@@ -186,8 +186,12 @@ while (z != 7):
             print(menu4)
             d = int(input("Please enter a number between 1 and 4:"))
             if d == 1:
-                print("1. delete all")
-                d = int(input("Please enter a number between 1 and 4:"))
+                path = input("Enter path and filename of the file that you want to delete:")
+                if os.path.exists(path):
+                    os.remove(path)
+                else:
+                    print("File doesnt exist")
+                    print("Check path and try again!")
             elif d == 2:
                 print("2. delete single row")
                 d = int(input("Please enter a number between 1 and 4:"))
