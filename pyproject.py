@@ -8,7 +8,7 @@ d = 0
 #Menus
 mainmenu = ("""
     1.create
-    2.read
+    2.read / write
     3.update
     4.delete
     5.save / export
@@ -24,7 +24,7 @@ menu1 = ("""
 menu2 = ("""
             1. Read file
             2. Read specific line in file
-            3. 
+            3. Write a specific text
             4. show empty filds
             5. back
             """)
