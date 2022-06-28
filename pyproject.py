@@ -147,6 +147,17 @@ while (z != 7):
                 b = int(input("Please enter a number between 1 and 5:"))
             elif b == 5:
                 print("Back to the menu")
+                
+#WRITE 
+            elif b == 3:
+                spaceholder1 = ("==================================================")
+                path = input("Enter file path and name:")
+                path_check = os.path.exists(path)
+                if path_check:
+                    f = open(path, "a")
+                    x = input("Enter the text you want to add: ")
+                    f.write(x)
+                    f.close()
 #UPDATE MENU
     elif z == 3:
         print(spaceholder1)
