@@ -158,6 +158,7 @@ while (z != 7):
                     x = input("Enter the text you want to add: ")
                     f.write(x)
                     f.close()
+                    print("Ihr Eintrag wurde übernommen.")
 #UPDATE MENU
     elif z == 3:
         print(spaceholder1)
